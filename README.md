@@ -1,9 +1,15 @@
 
 使用方法
 
-SSH 下
+centos 下 直接安装
+
 sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/uvbs/GostInstall/refs/heads/main/setup_gost_proxy_centos.sh)"
 
+如果出现问题 
+
+
+sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/uvbs/GostInstall/refs/heads/main/Comman.sh)"
+检查问题
 
 保存脚本：
 
