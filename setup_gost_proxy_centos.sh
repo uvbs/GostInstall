@@ -48,7 +48,7 @@ check_root() {
 install_dependencies() {
     info "安装必要的依赖..."
     dnf update -y
-    dnf install -y wget gunzip iptables iptables-services
+    dnf install -y wget gzip iptables iptables-services
 }
 
 # 下载并安装 Gost
@@ -58,7 +58,7 @@ install_gost() {
     wget -q https://github.com/ginuerzh/gost/releases/download/v${GOST_VERSION}/gost-linux-amd64-${GOST_VERSION}.gz
     
     info "解压并安装 Gost..."
-    gunzip gost-linux-amd64-${GOST_VERSION}.gz
+    gzip -d gost-linux-amd64-${GOST_VERSION}.gz
     mv gost-linux-amd64-${GOST_VERSION} /usr/local/bin/gost
     chmod +x /usr/local/bin/gost
     
