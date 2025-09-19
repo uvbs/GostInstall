@@ -1,4 +1,10 @@
+
 使用方法
+
+SSH 下
+sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/uvbs/GostInstall/refs/heads/main/setup_gost_proxy_centos.sh)"
+
+
 保存脚本：
 
 bash
