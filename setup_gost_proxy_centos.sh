@@ -301,7 +301,6 @@ main() {
     install_gost
     create_config
     create_service
-    setup_firewall
     start_service
     save_config_to_file
     show_info
