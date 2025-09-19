@@ -63,7 +63,7 @@ install_gost() {
     chmod +x /usr/local/bin/gost
     
     # 验证安装
-    if gost -version &>/dev/null; then
+    if gost -V &>/dev/null; then
         info "Gost 安装成功"
     else
         error "Gost 安装失败"
