@@ -9,6 +9,11 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/uvbs/GostInstall/ref
 
 
 sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/uvbs/GostInstall/refs/heads/main/Comman.sh)"
+
+
+因为到现在都没明白 gost 的配置文件，开始用多进程吧
+sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/uvbs/GostInstall/refs/heads/main/setup_gost_multi.sh)"
+
 检查问题
 
 保存脚本：
