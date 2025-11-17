@@ -21,6 +21,7 @@ sudo systemctl daemon-reload
 
 # 启动所有服务
 for port in 58002 58003 58004 58005; do
+
     sudo systemctl start gost-$port
     sudo systemctl enable gost-$port
 done
