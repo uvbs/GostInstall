@@ -20,19 +20,19 @@ cat /etc/systemd/system/gost.service
 sudo systemctl daemon-reload
 
 # 启动核心端口的 GOST 服务
-for port in 58002 58003 58004 58005; do
-    sudo systemctl start gost-$port
-    sudo systemctl enable gost-$port
-    echo "✅ 端口 $port 服务已启动并设置开机自启"
-done
+for port in 58002 58003 58004 58005; do<br>
+    sudo systemctl start gost-$port<br>
+    sudo systemctl enable gost-$port<br>
+    echo "✅ 端口 $port 服务已启动并设置开机自启"<br>
+done<br>
 
 # 检查所有服务状态
 
-for port in {58002..58021}; do
-    echo "=== 端口 $port 状态 ==="
-    sudo systemctl status gost-$port --no-pager -l
-    echo
-done
+for port in {58002..58021}; do<br>
+    echo "=== 端口 $port 状态 ==="<br>
+    sudo systemctl status gost-$port --no-pager -l<br>
+    echo<br>
+done<br>
 
 gost_3.2.6-nightly.20251011_linux_amd64v3.tar.gz
 
