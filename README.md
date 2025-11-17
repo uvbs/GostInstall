@@ -12,7 +12,11 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/uvbs/GostInstall/ref
 sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/uvbs/GostInstall/refs/heads/main/setup_gost_multi.sh)"
 cat /etc/systemd/system/gost.service
 
-
+=== 管理命令 ===
+启动: systemctl start gost
+停止: systemctl stop gost
+状态: systemctl status gost
+日志: journalctl -u gost -f
 sudo systemctl daemon-reload
 
 # 启动所有服务
