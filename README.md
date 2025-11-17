@@ -19,10 +19,11 @@ cat /etc/systemd/system/gost.service
 日志: journalctl -u gost -f
 sudo systemctl daemon-reload
 
-# 启动所有服务
+# 启动核心端口的 GOST 服务
 for port in 58002 58003 58004 58005; do
     sudo systemctl start gost-$port
     sudo systemctl enable gost-$port
+    echo "✅ 端口 $port 服务已启动并设置开机自启"
 done
 
 # 检查所有服务状态
