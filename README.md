@@ -1,23 +1,28 @@
+环境 : centos 7-9
+使用方法 
 
-使用方法
-
-centos 下 单个直接安装
-
-sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/uvbs/GostInstall/refs/heads/main/setup_gost_proxy_centos.sh)"
-
-sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/uvbs/GostInstall/refs/heads/main/Comman.sh)"
-
-
-因为到现在都没明白 gost 的配置文件，开始用多进程吧
-sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/uvbs/GostInstall/refs/heads/main/setup_gost_multi.sh)"
-cat /etc/systemd/system/gost.service
-
-=== 管理命令 ===
+1、单个直接安装
+  sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/uvbs/GostInstall/refs/heads/main/setup_gost_proxy_centos.sh)"
+  填写 转发的SK5 IP 端口，就能完成配置
+  === 管理命令 ===
 启动: systemctl start gost
 停止: systemctl stop gost
 状态: systemctl status gost
 日志: journalctl -u gost -f
 sudo systemctl daemon-reload
+
+sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/uvbs/GostInstall/refs/heads/main/Comman.sh)"
+
+
+2、多项采用多进程
+https://raw.githubusercontent.com/uvbs/GostInstall/refs/heads/main/setup_gost_multi.sh  这个文件下载下来， 修改为自己的数据
+上传 到vps， 执行， 就可以
+
+
+配置文件的目录
+cat /etc/systemd/system/gost.service
+
+
 
 # 启动核心端口的 GOST 服务
 for port in 58002 58003 58004 58005; do<br>
